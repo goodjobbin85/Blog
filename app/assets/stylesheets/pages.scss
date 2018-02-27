@@ -1,0 +1,41 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul {
+	float: right;
+	list-style-type: none;
+	clear: both;
+}
+
+h1, h2 {
+	display: block;
+	text-align: center;
+	clear: both;
+}
+
+li {
+	display: inline;
+	margin: 0 5px;
+}
+
+p {
+	text-align: center;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	float: right;
+}
+
+#pics {
+	margin: auto;
+	width: 50%;
+}
+
+
+#pics img {
+	width: 200px;
+	height: 200px;
+}

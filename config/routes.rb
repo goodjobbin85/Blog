@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
 
-	root 'application#hello'
+  root 'pages#index'
+  get 'about', to: 'pages#about', as: 'person'
 end
