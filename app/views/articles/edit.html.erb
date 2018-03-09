@@ -1,5 +1,5 @@
 <% if @article.errors.any? %>
-	<h2>The following errors prevented your article from being created:</h2>
+	<h2>There following errors prevented your entry from being saved:</h2>
 	<ul>
 		<% @article.errors.full_messages.each do |message| %>
 			<li><%= message %></li>
@@ -7,7 +7,8 @@
 	</ul>
 <% end %>
 
-<h1>Create a New Article</h1>
+
+<h1>Edit Article </h1>
 
 <%= form_for @article do |f| %>
 	<%= f.label  "Name" %>
@@ -19,6 +20,6 @@
 	<%= f.label "Description" %>
 	<%= f.text_area :description %></br>
 
-	<%= f.submit "Create Article" %>
+	<%= f.submit %>
 	
 <% end %>
