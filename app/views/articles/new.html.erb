@@ -1,24 +1,3 @@
-<% if @article.errors.any? %>
-	<h2>The following errors prevented your article from being created:</h2>
-	<ul>
-		<% @article.errors.full_messages.each do |message| %>
-			<li><%= message %></li>
-		<% end %>
-	</ul>
-<% end %>
+<h1>Create New Article</h1>
 
-<h1>Create a New Article</h1>
-
-<%= form_for @article do |f| %>
-	<%= f.label  "Name" %>
-	<%= f.text_field :name %></br>
-
-	<%= f.label "Title" %>
-	<%= f.text_field :title %></br>
-
-	<%= f.label "Description" %>
-	<%= f.text_area :description %></br>
-
-	<%= f.submit "Create Article" %>
-	
-<% end %>
+<%= render 'layouts/form' %>

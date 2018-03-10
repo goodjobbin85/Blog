@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
 	def index 
-		@article = Article.all
+		@articles = Article.all
 	end
 	def show 
 		@article = Article.find(params[:id])
@@ -30,12 +30,19 @@ class ArticlesController < ApplicationController
 	def create 
 		@article = Article.new(article_params)
 		if @article.save
-			redirect_to root_path
-			flash[:succes] = "New article created"
+			redirect_to articles_path
+			flash[:success] = "New article created"
 		else
 			render :new
 			flash[:notice] = "Sorry, invalid values"
 		end
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+		redirect_to articles_path
+		flash[:success] = "Article deleted"
 	end
 
 	private
