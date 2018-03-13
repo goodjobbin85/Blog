@@ -9,6 +9,8 @@ gem 'coffee-rails', '4.2.2'
 gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.7.0'
 gem 'jquery-rails'
+gem 'bootstrap-will_paginate',  '0.0.10'
+
 
 
 group :development, :test do
