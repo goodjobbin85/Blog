@@ -1,11 +1,4 @@
-<% if @article.errors.any? %>
-	<h2>There following errors prevented your entry from being saved:</h2>
-	<ul>
-		<% @article.errors.full_messages.each do |message| %>
-			<li><%= message %></li>
-		<% end %>
-	</ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
 
 <div class="row">
 	<div class="col-xs-12">
