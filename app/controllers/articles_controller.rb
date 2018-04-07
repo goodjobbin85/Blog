@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_action :set_article, only: [:edit, :update, :show]
+	before_action :set_article, only: [:edit, :update, :show, :destroy, :require_same_user]
 	before_action :require_user, except: [:index, :show]
 	before_action :require_same_user, only: [:edit, :update, :destroy]
 
@@ -43,7 +43,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-		@article = Article.find(params[:id])
 		@article.destroy
 		flash[:success] = "Article deleted"
 		redirect_to articles_path
